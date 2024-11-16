@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vox Follow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBCFZ0ywYTChjoZhSepKIyNpSZFX6Drjlo",
+  authDomain: "jubweb-21ae4.firebaseapp.com",
+  projectId: "jubweb-21ae4",
+  storageBucket: "jubweb-21ae4.firebasestorage.app",
+  messagingSenderId: "724062625697",
+  appId: "1:724062625697:web:90f11736a8cf1dadc2f5e0",
+  measurementId: "G-9NTZRXWH98"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+<script>
+    function signup() {
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+  
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(userCredential => {
+          alert("Inscription réussie !");
+        })
+        .catch(error => {
+          alert("Erreur : " + error.message);
+        });
+    }
+  </script>
+  
+<body>
+    <section id="signup">
+        <h2>Inscription</h2>
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Mot de passe">
+        <button onclick="signup()">S'inscrire</button>
+      </section>
+      <section id="login">
+        <h2>Connexion</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Mot de passe">
+        <button onclick="login()">Se connecter</button>
+      </section>
+      <script>
+        function login() {
+          const email = document.getElementById('login-email').value;
+          const password = document.getElementById('login-password').value;
+      
+          auth.signInWithEmailAndPassword(email, password)
+            .then(userCredential => {
+              alert("Connexion réussie !");
+            })
+            .catch(error => {
+              alert("Erreur : " + error.message);
+            });
+        }
+      </script>
+      
+      
+      
+  <header>
+    <h1>Bienvenue sur Vox Follow</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#login">Connexion</a>
+      <a href="#signup">Inscription</a>
+    </nav>
+  </header>
+  <main>
+    <section id="posts">
+      <h2>Publications récentes</h2>
+      <div>
+        <p>Aucune publication pour le moment.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Vox Follow</p>
+  </footer>
+</body>
+</html>

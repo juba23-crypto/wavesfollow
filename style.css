@@ -1,0 +1,56 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* En-tête */
+  header {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section principale */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Publications */
+  #posts div {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Pied de page */
+  footer {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
